@@ -1,8 +1,7 @@
 import React from 'react';
 import { GcsScores, Interpretation } from '../types';
-import BrainWarningIcon from './BrainWarningIcon';
+import Logo from './Logo';
 
-// Fix: Define the ScoreDisplayProps interface.
 interface ScoreDisplayProps {
   totalScore: number | null;
   scores: GcsScores;
@@ -20,7 +19,7 @@ const ScoreDisplay: React.FC<ScoreDisplayProps> = ({ totalScore, scores, interpr
     >
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
             <div className="w-16 h-16 rounded-full bg-zinc-900/75 flex items-center justify-center shadow-lg flex-shrink-0">
-                <BrainWarningIcon className="w-12 h-12" />
+                <Logo className="w-12 h-12" />
             </div>
             
             <div className="flex flex-col items-center md:items-start">
