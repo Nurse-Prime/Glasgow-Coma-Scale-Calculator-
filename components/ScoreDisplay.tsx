@@ -18,7 +18,7 @@ const ScoreDisplay: React.FC<ScoreDisplayProps> = ({ totalScore, scores, interpr
       aria-atomic="true"
     >
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
-            <div className="w-16 h-16 rounded-full bg-zinc-900/75 flex items-center justify-center shadow-lg flex-shrink-0">
+            <div className="w-16 h-16 rounded-full bg-zinc-900/75 flex items-center justify-center shadow-lg flex-shrink-0 overflow-hidden">
                 <Logo className="w-12 h-12" />
             </div>
             
