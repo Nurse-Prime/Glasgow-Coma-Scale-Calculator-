@@ -1,0 +1,5 @@
+
+{
+  "name": "Glasgow Score",
+  "description": "A mobile-first React application for calculating the Glasgow Coma Scale (GCS) score, providing real-time interpretation and clinical notation for healthcare professionals."
+}

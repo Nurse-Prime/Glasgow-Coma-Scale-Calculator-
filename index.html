@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glasgow Score</title>
+    <link rel="icon" type="image/png" src="Glasgow Scale Logo.png/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom animation for score updates */
+      @keyframes score-pop {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .animate-score-pop {
+        animation: score-pop 0.3s ease-out;
+      }
+
+      /* New premium background styles */
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 0;
+        filter: blur(100px); /* Soft blur effect */
+        opacity: 0.5;
+      }
+
+      .gradient-blob1,
+      .gradient-blob2,
+      .gradient-blob3 {
+        position: absolute;
+        border-radius: 50%;
+        mix-blend-mode: screen; /* Blend colors nicely */
+      }
+
+      .gradient-blob1 {
+        width: 60vmax;
+        height: 60vmax;
+        background-color: rgba(245, 158, 11, 0.3); /* Muted Yellow/Amber */
+        animation: move1 25s infinite alternate ease-in-out;
+      }
+
+      .gradient-blob2 {
+        width: 50vmax;
+        height: 50vmax;
+        background-color: rgba(234, 88, 12, 0.2); /* Dull Orange */
+        animation: move2 30s infinite alternate ease-in-out;
+      }
+
+      .gradient-blob3 {
+        width: 45vmax;
+        height: 45vmax;
+        background-color: rgba(71, 85, 105, 0.4); /* Grey/Slate */
+        animation: move3 20s infinite alternate ease-in-out;
+      }
+
+      @keyframes move1 {
+        from {
+          transform: translate(-20vw, -10vh) rotate(-60deg);
+        }
+        to {
+          transform: translate(30vw, 20vh) rotate(40deg);
+        }
+      }
+
+      @keyframes move2 {
+        from {
+          transform: translate(50vw, 40vh) rotate(50deg);
+        }
+        to {
+          transform: translate(10vw, -30vh) rotate(-30deg);
+        }
+      }
+
+      @keyframes move3 {
+        from {
+          transform: translate(10vw, 60vh);
+        }
+        to {
+          transform: translate(60vw, 20vh);
+        }
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
