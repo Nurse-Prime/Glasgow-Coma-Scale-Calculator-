@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { GcsScores, GcsComponent } from '../types';
-import { EYE_RESPONSE_OPTIONS, VERBAL_RESPONSE_OPTIONS, MOTOR_RESPONSE_OPTIONS, getInterpretation } from '../constants';
+import { EYE_RESPONSE_OPTIONS, VERBAL_RESPONSE_OPTIONS, MOTOR_RESPONSE_OPTIONS, getInterpretation, COPY_SUCCESS_MESSAGE } from '../constants';
 import ScoreDisplay from './ScoreDisplay';
 import ResponseSection from './ResponseSection';
 import ActionButton from './ActionButton';
@@ -86,7 +86,7 @@ const GcsCalculator: React.FC = () => {
           Copy Score
         </ActionButton>
       </div>
-      <Toast message="Score copied to clipboard!" show={showToast} />
+      <Toast message={COPY_SUCCESS_MESSAGE} show={showToast} />
     </div>
   );
 };

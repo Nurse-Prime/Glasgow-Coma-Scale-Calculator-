@@ -51,6 +51,8 @@ export const SEVERITY_INTERPRETATIONS: { [key in SeverityLevel]: Interpretation 
   }
 };
 
+export const COPY_SUCCESS_MESSAGE = 'Score copied to clipboard!';
+
 export const getInterpretation = (score: number | null): Interpretation => {
   if (score === null) return SEVERITY_INTERPRETATIONS[SeverityLevel.Unscored];
   if (score >= 3 && score <= 8) return SEVERITY_INTERPRETATIONS[SeverityLevel.Severe];
